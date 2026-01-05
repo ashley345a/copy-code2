@@ -6,92 +6,97 @@
 <title>蝦皮 2026 年免運與手續費完整說明</title>
 
 <style>
+  /* 基本字體與莫蘭迪色系 */
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
     margin: 0;
-    background: #f7f7f7;
-    line-height: 1.7;
+    background: #e0dedc; /* 莫蘭迪灰 */
     color: #333;
+    line-height: 1.7;
+    -webkit-user-select: none; /* 禁止複製 */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  h1 {
+    font-size: 26px;
+    text-align: center;
+    margin: 20px 0;
+    color: #4b4a48; /* 莫蘭迪深灰 */
   }
 
   header {
-    background: #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid #ddd;
-  }
-
-  nav {
+    background: #c8c6c4; /* 莫蘭迪淺灰 */
+    padding: 10px 0;
     display: flex;
-    overflow-x: auto;
+    justify-content: center;
   }
 
-  nav a {
-    flex: 1;
-    padding: 14px 16px;
-    text-align: center;
-    text-decoration: none;
+  nav button {
+    background: #b1afae; /* 莫蘭迪灰 */
+    border: none;
+    margin: 0 5px;
+    padding: 10px 18px;
     font-weight: bold;
-    color: #555;
-    white-space: nowrap;
+    cursor: pointer;
+    color: #4b4a48;
+    border-radius: 6px;
   }
 
-  nav a:hover {
-    background: #f0f0f0;
+  nav button.active {
+    background: #d8d6d5; /* 選中顏色 */
+    color: #000;
   }
 
   section {
-    background: #ffffff;
-    margin: 16px;
+    display: none; /* 初始隱藏所有內容 */
+    background: #f4f3f2; /* 莫蘭迪背景 */
+    margin: 20px;
     padding: 20px;
     border-radius: 12px;
   }
 
-  h1 {
-    font-size: 22px;
-    margin-bottom: 12px;
+  section.active {
+    display: block;
   }
 
-  h2 {
-    font-size: 18px;
-    margin-top: 0;
+  .link {
+    color: orange; /* 橘色超連結 */
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .note {
+    background: #e8e4dc;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 12px;
   }
 
   ul {
     padding-left: 20px;
-  }
-
-  .link {
-    color: #0066cc;
-    text-decoration: underline;
-    font-weight: bold;
-  }
-
-  .note {
-    background: #fff3cd;
-    padding: 12px;
-    border-radius: 8px;
-    margin-top: 12px;
   }
 </style>
 </head>
 
 <body>
 
+<h1>蝦皮 2026 年免運與手續費完整說明</h1>
+
 <header>
   <nav>
-    <a href="#overview">整體<br/>說明</a>
-    <a href="#free">全站大免運</a>
-    <a href="#plan">方案與後台</a>
-    <a href="#fee">手續費細項</a>
-    <a href="#official">官方公告</a>
-    <a href="#suggest">總結建議</a>
+    <button class="tab-button active" data-tab="overview">政策<br/>說明</button>
+    <button class="tab-button" data-tab="free">全站大免運</button>
+    <button class="tab-button" data-tab="plan">方案與後台</button>
+    <button class="tab-button" data-tab="fee">手續費細項</button>
+    <button class="tab-button" data-tab="official">官方公告</button>
+    <button class="tab-button" data-tab="suggest">總結建議</button>
   </nav>
 </header>
 
-<section id="overview">
-  <h1>蝦皮 2026 年免運與手續費完整說明</h1>
+<!-- 各個頁籤內容 -->
+<section id="overview" class="active">
   <p>
     如果賣家平常沒有特別關注蝦皮公告，最近可能會覺得手續費暴增、成本提高，
     主要原因是 蝦皮 2026 年主推「全站大免運」政策：
@@ -133,12 +138,9 @@
   </div>
 
   <h2>🔹 系統自動分配方案</h2>
-  <ul>
-    <li>未主動報名方案的賣家：系統會依過去訂單自動判斷最適合的方案（方案一或方案二）</li>
-    <li>若想自行更改方案：需主動到後台重新報名，否則沿用系統判定方案</li>
-  </ul>
-
   <p>
+    未主動報名方案的賣家：系統會依過去訂單自動判斷最適合的方案（方案一或方案二）<br>
+    若想自行更改方案：需主動到後台重新報名，否則沿用系統判定方案<br>
     賣家後台報名頁面（確認目前方案、再至可報名欄位重新報名）<br>
     <a class="link" href="https://seller.shopee.tw/portal/marketing/cmt/campaign?tab=2&sort=9" target="_blank">點我前往</a>
   </p>
@@ -208,6 +210,22 @@
     </li>
   </ul>
 </section>
+
+<script>
+  // 頁籤切換功能
+  const buttons = document.querySelectorAll('.tab-button');
+  const sections = document.querySelectorAll('section');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      sections.forEach(s => s.classList.remove('active'));
+      document.getElementById(btn.getAttribute('data-tab')).classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>
