@@ -3,126 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>蝦皮 2026 免運與手續費完整說明</title>
+<title>蝦皮 2026 免運與手續費說明</title>
 <style>
-/* ===== 韓系手帳風 ===== */
+/* ===== 全局設定 ===== */
 body {
   margin: 0;
   font-family: "Noto Sans TC", sans-serif;
-  background: #fdfaf7; /* 柔和奶油底色 */
+  background: #fafafc url('https://i.imgur.com/4y6L8kE.png') repeat; /* 韓系手帳網格背景 */
   color: #333;
   line-height: 1.5;
 }
 
-/* ===== 標題 ===== */
-header {
-  background: #fff5f7;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #ff6b81; /* 柔粉色 */
-}
-
-header h2 {
-  margin: 4px 0 0 0;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #5c6bc0; /* 柔藍紫 */
-}
-
-/* ===== Tab 標籤 ===== */
-.nav-tabs {
-  display: flex;
-  margin-top: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-.nav-tabs button {
-  background: none;
-  border: none;
-  padding: 8px 12px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  color: #555;
-  border-bottom: 3px solid transparent;
-  transition: all 0.3s;
-}
-
-.nav-tabs button.active {
-  color: #ff6b81;
-  border-bottom: 3px solid #ff6b81;
-}
-
-/* ===== 內容區 ===== */
-section {
-  padding: 15px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* ===== 手帳框線風格 ===== */
-.card {
-  border: 1px solid #f0d9e0;
-  background: #fff0f5;
-  padding: 12px 15px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.card::before {
-  content: "📝";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 1.1rem;
-}
-
-section h2 {
-  font-size: 1.2rem;
-  margin-top: 25px;
-  margin-bottom: 8px;
-  color: #ff6b81;
-}
-
-section p, section li {
-  font-size: 0.92rem;
-  margin-bottom: 6px;
-}
-
-/* 調整縮排，更緊湊 */
-section ul {
-  margin-left: 10px; /* 更靠左 */
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 8px 0;
-}
-
-table th, table td {
-  border: 1px solid #f0d9e0;
-  padding: 6px 10px;
-  text-align: left;
-}
-
-table th {
-  background: #ffe6f0;
-  font-weight: 600;
-  color: #ff6b81;
-}
-
 a {
-  color: #5c6bc0;
+  color: #7f5af0;
   text-decoration: none;
 }
 
@@ -130,31 +23,167 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ===== 標題 ===== */
+header {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+header h1, header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #5c6bc0;
+}
+
+header h2 {
+  margin-top: 5px;
+}
+
+/* ===== 頁籤 ===== */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.nav-tabs button {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.2;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column; /* 分行 */
+  justify-content: center;
+}
+
+.nav-tabs button.active {
+  border-color: #7f5af0;
+  background: #f5f0ff;
+  color: #7f5af0;
+}
+
+/* ===== 內容區 ===== */
+.tab-content {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section::before {
+  content: "📝"; /* 小圖示點綴 */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+}
+
+section h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #5c6bc0;
+}
+
+section p, section li {
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+}
+
+section ul {
+  margin-left: 10px; /* 符號內縮往前移 */
+}
+
+code {
+  background: #f0f0f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+/* ===== 表格 ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+}
+
+table th, table td {
+  border: 1px solid #eee;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+table th {
+  background: #f0f0f5;
+  font-weight: 600;
+  color: #5c6bc0;
+}
+
 /* ===== Tab 切換 ===== */
-.tab-content > div { display: none; }
-.tab-content > div.active { display: block; }
+.tab-content > div {
+  display: none;
+}
+
+.tab-content > div.active {
+  display: block;
+}
+
+/* ===== 底部 ===== */
+footer {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 0.85rem;
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+footer img {
+  width: 18px;
+  height: 18px;
+}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>蝦皮 2026 年免運與手續費</h1>
+  <h1>蝦皮2026年免運與手續費</h1>
   <h2>完整說明</h2>
+
   <div class="nav-tabs">
-    <button class="tab-btn active" data-tab="core">核心重點</button>
-    <button class="tab-btn" data-tab="auto">方案選擇</button>
-    <button class="tab-btn" data-tab="fees">手續費細項</button>
-    <button class="tab-btn" data-tab="links">官方公告</button>
-    <button class="tab-btn" data-tab="summary">總結建議</button>
+    <button class="tab-btn active" data-tab="core">核心<br>重點</button>
+    <button class="tab-btn" data-tab="auto">方案<br>選擇</button>
+    <button class="tab-btn" data-tab="fees">手續費<br>細項</button>
+    <button class="tab-btn" data-tab="links">官方<br>公告</button>
+    <button class="tab-btn" data-tab="summary">總結<br>建議</button>
   </div>
 </header>
 
 <div class="tab-content">
-
   <div id="core" class="active">
-    <section class="card">
+    <section>
       <p>如果賣家平常沒有特別關注蝦皮公告，最近可能會覺得手續費暴增、成本提高，主要原因是 <strong>蝦皮 2026 年主推「全站大免運」政策</strong>：</p>
       <p>只要使用指定物流、達到免運門檻，全站商品均免運，但賣家則須支付專案服務費。</p>
+      <p>🔹 全站大免運活動頁面：</p>
       <ul>
         <li>買家版：<a href="https://s.shopee.tw/8Kj1usgrum" target="_blank">點此查看</a></li>
         <li>賣家版：<a href="https://s.shopee.tw/BNKBunANm" target="_blank">點此查看</a></li>
@@ -182,7 +211,7 @@ a:hover {
     </section>
   </div>
 
-  <div id="auto" class="card">
+  <div id="auto">
     <section>
       <h2>系統自動分配方案</h2>
       <ul>
@@ -209,7 +238,7 @@ a:hover {
     </section>
   </div>
 
-  <div id="fees" class="card">
+  <div id="fees">
     <section>
       <h2>蝦皮手續費細項</h2>
       <ul>
@@ -227,7 +256,7 @@ a:hover {
           </ul>
         </li>
       </ul>
-      <p>💡 其他可能費用：</p>
+      <p>💡 另有其他可能費用（依賣場性質）：</p>
       <ul>
         <li>較長備貨 3%</li>
         <li>非整合物流隱碼費 $10</li>
@@ -237,7 +266,7 @@ a:hover {
     </section>
   </div>
 
-  <div id="links" class="card">
+  <div id="links">
     <section>
       <h2>官方公告與詳細說明</h2>
       <ul>
@@ -248,7 +277,7 @@ a:hover {
     </section>
   </div>
 
-  <div id="summary" class="card">
+  <div id="summary">
     <section>
       <h2>總結與建議</h2>
       <ul>
@@ -269,8 +298,12 @@ a:hover {
       </ul>
     </section>
   </div>
-
 </div>
+
+<footer>
+  <img src="https://i.imgur.com/Rfz1Hwx.png" alt="Threads">
+  Threads｜@ashley345a
+</footer>
 
 <script>
 // Tab 切換
