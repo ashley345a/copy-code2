@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蝦皮 2026 免運與手續費說明</title>
+<style>
+/* 韓系簡約風基礎設定 */
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #5c6bc0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 標題與頁籤 */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.nav-tabs {
+  display: flex;
+  margin-top: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-tabs button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-tabs button.active {
+  color: #5c6bc0;
+  border-bottom: 3px solid #5c6bc0;
+}
+
+/* 內容區 */
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+section p, section li {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+section ul {
+  margin-left: 20px;
+}
+
+code {
+  background: #f3f3f3;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* 隱藏內容用Tab切換 */
+.tab-content > div {
+  display: none;
+}
+
+.tab-content > div.active {
+  display: block;
+}
+
+/* 表格簡約風格 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+table th, table td {
+  border: 1px solid #eee;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+table th {
+  background: #f9f9f9;
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>蝦皮 2026 免運與手續費完整說明</h1>
+  <div class="nav-tabs">
+    <button class="tab-btn active" data-tab="core">核心重點</button>
+    <button class="tab-btn" data-tab="auto">方案選擇</button>
+    <button class="tab-btn" data-tab="fees">手續費細項</button>
+    <button class="tab-btn" data-tab="links">官方公告</button>
+    <button class="tab-btn" data-tab="summary">總結建議</button>
+  </div>
+</header>
+
+<div class="tab-content">
+  <div id="core" class="active">
+    <section>
+      <p>如果賣家平常沒有特別關注蝦皮公告，最近可能會覺得手續費暴增、成本提高，主要原因是 <strong>蝦皮 2026 年主推「全站大免運」政策</strong>：</p>
+      <p>只要使用指定物流、達到免運門檻，全站商品均免運，但賣家則須支付專案服務費。</p>
+      <p>🔹 全站大免運活動頁面：</p>
+      <ul>
+        <li>買家版：<a href="https://s.shopee.tw/8Kj1usgrum" target="_blank">點此查看</a></li>
+        <li>賣家版：<a href="https://s.shopee.tw/BNKBunANm" target="_blank">點此查看</a></li>
+      </ul>
+
+      <h2>核心重點</h2>
+      <ul>
+        <li>1️⃣ 賣家強制加入「免運及進階賣家專案」，無法退出</li>
+        <li>2️⃣ 每筆訂單收取專案活動服務費
+          <ul>
+            <li>方案一：每筆訂單抽 6%</li>
+            <li>方案二：每筆訂單固定 $60</li>
+          </ul>
+        </li>
+        <li>3️⃣ 每月可減免一筆專案活動服務費（第一筆訂單）</li>
+        <li>4️⃣ 指定物流與免運門檻
+          <ul>
+            <li>指定物流：蝦皮店到店、隔日到貨、店到家宅配、新竹物流</li>
+            <li>免運門檻：店取滿 $199 / 宅配滿 $490</li>
+          </ul>
+        </li>
+      </ul>
+      <p>🔎 免運費是蝦皮額外補貼，若賣家未開指定物流、買家未選指定物流，或訂單未達免運門檻，該筆訂單不會套用免運補貼，買家需自行付運費。</p>
+      <p>⚠️ 也就是說！！即使買家自付運費，賣家仍須支付專案服務費。</p>
+    </section>
+  </div>
+
+  <div id="auto">
+    <section>
+      <h2>系統自動分配方案</h2>
+      <ul>
+        <li>未主動報名方案的賣家：系統會依過去訂單自動判斷最適合方案（方案一或方案二）</li>
+        <li>若想自行更改方案：需主動到後台重新報名，否則沿用系統判定方案</li>
+      </ul>
+      <p>賣家後台報名頁面（確認目前方案、再至可報名欄位重新報名）：
+      <a href="https://seller.shopee.tw/portal/marketing/cmt/campaign?tab=2&sort=9" target="_blank">點此查看</a></p>
+
+      <h2>快速選擇方案原則</h2>
+      <p>用「客單價方向」快速判斷（選擇方案二建議設低消門檻）：</p>
+      <table>
+        <tr>
+          <th>客單價</th>
+          <th>建議方案</th>
+        </tr>
+        <tr>
+          <td>大部分訂單金額 < 1,000 元</td>
+          <td>方案一（6%）</td>
+        </tr>
+        <tr>
+          <td>大部分訂單金額 > 1,000 元</td>
+          <td>方案二（每筆 $60）</td>
+        </tr>
+      </table>
+    </section>
+  </div>
+
+  <div id="fees">
+    <section>
+      <h2>蝦皮手續費細項</h2>
+      <ul>
+        <li>1️⃣ 成交手續費：
+          <ul>
+            <li>分類基本費率約 4~7%，依商品類別略有不同</li>
+            <li>未參加蝦幣回饋 → 大檔另加收 2%（每月4天）</li>
+          </ul>
+        </li>
+        <li>2️⃣ 其他服務費：即「免運及進階賣家專案服務費」</li>
+        <li>3️⃣ 金流與系統處理費：
+          <ul>
+            <li>(平台交易金額+運費) × 2.5%、分 6 期另計</li>
+            <li>含：蝦皮折扣、蝦幣、補貼（不含賣場劵）</li>
+          </ul>
+        </li>
+      </ul>
+      <p>💡 另有其他可能費用（依賣場性質）：</p>
+      <ul>
+        <li>較長備貨 3%</li>
+        <li>非整合物流隱碼費 $10</li>
+        <li>代開發票 $2.5</li>
+        <li>營業稅 5%</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="links">
+    <section>
+      <h2>官方公告與詳細說明</h2>
+      <ul>
+        <li><a href="https://seller.shopee.tw/edu/article/26430" target="_blank">2026年費率更新總整</a></li>
+        <li><a href="https://seller.shopee.tw/edu/article/26470" target="_blank">成交手續費 & 金流與系統處理費</a></li>
+        <li><a href="https://seller.shopee.tw/edu/article/18733" target="_blank">免運及進階賣家專案</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="summary">
+    <section>
+      <h2>總結與建議</h2>
+      <ul>
+        <li>蝦皮：最大贏家，免運吸引更多買家</li>
+        <li>賣家：手續費提高、實收金額下降，可能需調整售價或策略</li>
+        <li>買家：享受滿額免運，但商品價格可能稍高</li>
+      </ul>
+      <p>建議策略：</p>
+      <ul>
+        <li>多平台營運：降低對單一平台依賴</li>
+        <li>推薦平台：
+          <ul>
+            <li>iOPENMall：免手續費 + 有免運券 <a href="https://mall.iopenmall.tw/iopen/index.php?action=event_member" target="_blank">點此查看</a></li>
+            <li>其他平台：露天拍賣、奇摩拍賣、旋轉拍賣</li>
+            <li>iOPENMall及露天拍賣支援無痛搬家 <a href="https://www.threads.com/@ashley345a/post/DRZ3TQBgchj?xmt=AQF0hEehkOg1j0TLzYt1MBonj0_SSJm8Bj7ragJxU8yat_zDH2sFAWJYRMC38epiNmhVk52o&slof=1" target="_blank">教學連結</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script>
+// Tab 切換功能
+const tabs = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.tab-content > div');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
