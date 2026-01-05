@@ -3,48 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>蝦皮2026年免運與手續費</p/>詳細說明</title>
+<title>蝦皮 2026 免運與手續費完整說明</title>
 <style>
-/* ===== 韓系簡約風全局設定 ===== */
+/* ===== 韓系手帳風 ===== */
 body {
   margin: 0;
   font-family: "Noto Sans TC", sans-serif;
-  background: #f5f5f7; /* 淺灰紫色底 */
+  background: #fdfaf7; /* 柔和奶油底色 */
   color: #333;
   line-height: 1.5;
 }
 
-a {
-  color: #7f5af0; /* 柔和紫藍色 */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== 頁首與標題 ===== */
+/* ===== 標題 ===== */
 header {
-  background: #ffffff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  padding: 12px 20px;
+  background: #fff5f7;
+  padding: 15px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 header h1 {
   margin: 0;
   font-size: 1.6rem;
-  font-weight: 600;
-  color: #5c6bc0; /* 輕柔韓系藍 */
+  font-weight: 700;
+  color: #ff6b81; /* 柔粉色 */
 }
 
-/* ===== 頁籤 ===== */
+header h2 {
+  margin: 4px 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #5c6bc0; /* 柔藍紫 */
+}
+
+/* ===== Tab 標籤 ===== */
 .nav-tabs {
   display: flex;
-  margin-top: 8px;
-  border-bottom: 1px solid #e0e0e0;
+  margin-top: 10px;
+  border-bottom: 1px solid #eee;
 }
 
 .nav-tabs button {
@@ -54,13 +52,13 @@ header h1 {
   font-size: 0.95rem;
   cursor: pointer;
   color: #555;
-  transition: all 0.3s;
   border-bottom: 3px solid transparent;
+  transition: all 0.3s;
 }
 
 .nav-tabs button.active {
-  color: #7f5af0;
-  border-bottom: 3px solid #7f5af0;
+  color: #ff6b81;
+  border-bottom: 3px solid #ff6b81;
 }
 
 /* ===== 內容區 ===== */
@@ -70,40 +68,41 @@ section {
   margin: 0 auto;
 }
 
+/* ===== 手帳框線風格 ===== */
+.card {
+  border: 1px solid #f0d9e0;
+  background: #fff0f5;
+  padding: 12px 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.card::before {
+  content: "📝";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.1rem;
+}
+
 section h2 {
   font-size: 1.2rem;
   margin-top: 25px;
   margin-bottom: 8px;
-  font-weight: 600;
-  color: #5c6bc0;
+  color: #ff6b81;
 }
 
 section p, section li {
   font-size: 0.92rem;
-  margin-bottom: 6px; /* 文字間距少一些 */
+  margin-bottom: 6px;
 }
 
+/* 調整縮排，更緊湊 */
 section ul {
-  margin-left: 15px; /* 縮短縮排 */
+  margin-left: 10px; /* 更靠左 */
 }
 
-code {
-  background: #f0f0f5;
-  padding: 2px 4px;
-  border-radius: 3px;
-  font-size: 0.9rem;
-}
-
-/* ===== Tab 切換內容 ===== */
-.tab-content > div {
-  display: none;
-}
-
-.tab-content > div.active {
-  display: block;
-}
-
-/* ===== 表格 ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -111,22 +110,36 @@ table {
 }
 
 table th, table td {
-  border: 1px solid #eee;
+  border: 1px solid #f0d9e0;
   padding: 6px 10px;
   text-align: left;
 }
 
 table th {
-  background: #f0f0f5;
+  background: #ffe6f0;
   font-weight: 600;
-  color: #5c6bc0;
+  color: #ff6b81;
 }
+
+a {
+  color: #5c6bc0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Tab 切換 ===== */
+.tab-content > div { display: none; }
+.tab-content > div.active { display: block; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>蝦皮 2026 免運與手續費完整說明</h1>
+  <h1>蝦皮 2026 年免運與手續費</h1>
+  <h2>完整說明</h2>
   <div class="nav-tabs">
     <button class="tab-btn active" data-tab="core">核心重點</button>
     <button class="tab-btn" data-tab="auto">方案選擇</button>
@@ -137,11 +150,11 @@ table th {
 </header>
 
 <div class="tab-content">
+
   <div id="core" class="active">
-    <section>
+    <section class="card">
       <p>如果賣家平常沒有特別關注蝦皮公告，最近可能會覺得手續費暴增、成本提高，主要原因是 <strong>蝦皮 2026 年主推「全站大免運」政策</strong>：</p>
       <p>只要使用指定物流、達到免運門檻，全站商品均免運，但賣家則須支付專案服務費。</p>
-      <p>🔹 全站大免運活動頁面：</p>
       <ul>
         <li>買家版：<a href="https://s.shopee.tw/8Kj1usgrum" target="_blank">點此查看</a></li>
         <li>賣家版：<a href="https://s.shopee.tw/BNKBunANm" target="_blank">點此查看</a></li>
@@ -169,18 +182,16 @@ table th {
     </section>
   </div>
 
-  <div id="auto">
+  <div id="auto" class="card">
     <section>
       <h2>系統自動分配方案</h2>
       <ul>
         <li>未主動報名方案的賣家：系統會依過去訂單自動判斷最適合方案（方案一或方案二）</li>
         <li>若想自行更改方案：需主動到後台重新報名，否則沿用系統判定方案</li>
       </ul>
-      <p>賣家後台報名頁面（確認目前方案、再至可報名欄位重新報名）：  
-      <a href="https://seller.shopee.tw/portal/marketing/cmt/campaign?tab=2&sort=9" target="_blank">點此查看</a></p>
+      <p>賣家後台報名頁面：<a href="https://seller.shopee.tw/portal/marketing/cmt/campaign?tab=2&sort=9" target="_blank">點此查看</a></p>
 
       <h2>快速選擇方案原則</h2>
-      <p>用「客單價方向」快速判斷（選擇方案二建議設低消門檻）：</p>
       <table>
         <tr>
           <th>客單價</th>
@@ -198,7 +209,7 @@ table th {
     </section>
   </div>
 
-  <div id="fees">
+  <div id="fees" class="card">
     <section>
       <h2>蝦皮手續費細項</h2>
       <ul>
@@ -216,7 +227,7 @@ table th {
           </ul>
         </li>
       </ul>
-      <p>💡 另有其他可能費用（依賣場性質）：</p>
+      <p>💡 其他可能費用：</p>
       <ul>
         <li>較長備貨 3%</li>
         <li>非整合物流隱碼費 $10</li>
@@ -226,7 +237,7 @@ table th {
     </section>
   </div>
 
-  <div id="links">
+  <div id="links" class="card">
     <section>
       <h2>官方公告與詳細說明</h2>
       <ul>
@@ -237,7 +248,7 @@ table th {
     </section>
   </div>
 
-  <div id="summary">
+  <div id="summary" class="card">
     <section>
       <h2>總結與建議</h2>
       <ul>
@@ -258,10 +269,11 @@ table th {
       </ul>
     </section>
   </div>
+
 </div>
 
 <script>
-// Tab 切換功能
+// Tab 切換
 const tabs = document.querySelectorAll('.tab-btn');
 const contents = document.querySelectorAll('.tab-content > div');
 
