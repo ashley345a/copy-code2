@@ -1,276 +1,314 @@
+<!DOCTYPE html>  <html lang="zh-TW">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>蝦皮 2026 年免運與手續費｜完整說明</title>  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">  
+  <style>  
+    :root{  
+      --bg:#fdf7f0;          /* 手帳紙色背景 */  
+      --card:#fffefb;        /* 卡片底色 */  
+      --line:#e2dcd1;        /* 卡片邊框/線條 */  
+      --accent:#b7c9a7;      /* 柔和綠 */  
+      --accent2:#c8b89b;     /* 柔和棕 */  
+      --accent-soft:#f4f1ed; /* 卡片陰影底 */  
+      --text:#4a4a4a;        /* 深灰文字 */  
+      --sub:#6d6d6d;         /* 次要文字 */  
+    }  
+    *{box-sizing:border-box;}  
+    body{  
+      margin:0;  
+      font-family:'Noto Sans TC', sans-serif;  
+      background:var(--bg);  
+      color:var(--text);  
+      line-height:1.8;  
+    }  
+    .wrap{max-width:960px;margin:0 auto;padding:24px 16px 60px;}  /* header */  
+header{text-align:center;margin-bottom:28px;}  
+header h1, header h2{  
+  margin:0;  
+  font-family:'Caveat', 'Noto Sans TC', cursive;  
+}  
+header h1{font-size:32px;}  
+header h2{font-size:26px;color:var(--accent2);}  
 
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>蝦皮 2026 年免運與手續費｜完整說明</title>
+/* tabs 手帳風 */  
+.tabs{  
+  display:flex;  
+  gap:8px;  
+  justify-content:flex-start;  
+  overflow-x:auto;  
+  -webkit-overflow-scrolling:touch;  
+  flex-wrap:nowrap;  
+  margin:12px 0 24px;  
+  position:sticky;  
+  top:80px;  
+  background:var(--bg);  
+  z-index:998;  
+  padding:6px 4px;  
+}  
+.tabs a{  
+  padding:10px 16px;  
+  background:var(--card);  
+  border:1px solid var(--line);  
+  border-radius:20px;  
+  text-decoration:none;  
+  color:var(--text);  
+  font-size:14px;  
+  font-weight:500;  
+  box-shadow:0 3px 8px rgba(0,0,0,0.05);  
+  transition:.3s;  
+  white-space:nowrap;  
+}  
+.tabs a.active{background:var(--accent2);border-color:var(--accent);}  
+.tabs a:hover{background:var(--accent-soft);}  
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+/* section & card */  
+section{margin-bottom:36px;}  
+.card{  
+  background:var(--card);  
+  border:1px solid var(--line);  
+  border-radius:18px;  
+  padding:24px 22px 26px;  
+  box-shadow:0 8px 20px rgba(0,0,0,.06);  
+  position:relative;  
+}  
+section h3{  
+  margin:0 0 14px;  
+  font-size:20px;  
+  font-family:'Caveat', 'Noto Sans TC', cursive;  
+  display:flex;  
+  align-items:center;  
+  gap:8px;  
+}  
+section h3::before{  
+  content:"📝";  
+  font-size:18px;  
+}  
 
-  <style>
-    :root{
-      --bg:#fdf7f0;
-      --card:#fffefb;
-      --line:#e2dcd1;
-      --accent:#b7c9a7;
-      --accent2:#c8b89b;
-      --accent-soft:#f4f1ed;
-      --text:#4a4a4a;
-      --sub:#6d6d6d;
-    }
+p{margin:0 0 14px;}  
+ul{padding-left:1.3em;margin:8px 0;}  
+li{margin:6px 0;}  
 
-    *{box-sizing:border-box;}
+.links a{  
+  display:inline-block;  
+  margin-right:14px;  
+  color:var(--accent2);  
+  text-decoration:underline;  
+  font-weight:500;  
+}  
 
-    body{
-      margin:0;
-      font-family:'Noto Sans TC', sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.8;
-    }
+.note{  
+  background:var(--accent-soft);  
+  border-radius:12px;  
+  padding:14px;  
+  margin-top:14px;  
+  font-size:14px;  
+  color:var(--sub);  
+}  
 
-    .wrap{
-      max-width:960px;
-      margin:0 auto;
-      padding:24px 16px 60px;
-    }
+footer{  
+  text-align:center;  
+  margin-top:40px;  
+  color:var(--sub);  
+  font-size:14px;  
+}  
+footer a{color:inherit;text-decoration:none;}  
 
-    header{
-      text-align:center;
-      margin-bottom:28px;
-    }
+/* 手帳風 highlight */  
+strong{  
+  background:rgba(183,201,167,0.3);  
+  padding:2px 4px;  
+  border-radius:4px;  
+}  
 
-    header h1, header h2{
-      margin:0;
-      font-family:'Caveat','Noto Sans TC',cursive;
-    }
+/* 手帳風表格 */  
+table{  
+  border-collapse: collapse;  
+  width:100%;  
+  margin:12px 0;  
+}  
+th,td{  
+  border:1px solid var(--line);  
+  padding:8px 12px;  
+  border-radius:6px;  
+  text-align:left;  
+}  
 
-    header h1{font-size:32px;}
-    header h2{font-size:26px;color:var(--accent2);}
+/* 手機小螢幕調整 */  
+@media(max-width:480px){  
+  .card { padding:16px 12px 18px; }  
+  .tabs a { padding:6px 10px; font-size:12px; }  
+}
 
-    /* Tabs */
-    .tabs{
-      display:flex;
-      gap:8px;
-      overflow-x:auto;
-      margin:12px 0 24px;
-      position:sticky;
-      top:12px;
-      background:var(--bg);
-      z-index:10;
-      padding:6px 4px;
-    }
+  </style>  
+</head>  
+<body>  
+  <div class="wrap">  
+    <header>  
+      <h1>蝦皮2026 年免運與手續費</h1>  
+      <h2>［完整說明］</h2>  
+    </header>  <nav class="tabs">  
+  <a href="#intro" class="active">全站<br>大免運</a>  
+  <a href="#core">核心<br>重點</a>  
+  <a href="#plan">方案<br>選擇</a>  
+  <a href="#fee">手續費<br>細項</a>  
+  <a href="#summary">總結<br>建議</a>  
+</nav>  
 
-    .tabs a{
-      padding:10px 16px;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:20px;
-      text-decoration:none;
-      color:var(--text);
-      font-size:14px;
-      font-weight:500;
-      box-shadow:0 3px 8px rgba(0,0,0,0.05);
-      white-space:nowrap;
-    }
+<section id="intro">  
+  <div class="card">  
+    <h3>全站大免運說明</h3>  
+    <p>如果賣家平常沒有特別關注蝦皮公告，最近可能會覺得手續費暴增、成本提高，主要原因是蝦皮 2026 年主推「全站大免運」：  
+    <br>只要使用指定物流、達到免運門檻，全站商品免用劵即享有免運，但賣家『每筆訂單』須支付專案服務費。</p>  
+    ⚠️ 備註：全站大免運活動排除「冷鏈、大材積、特殊物流等」商品與「愛買、屈臣氏、家樂福與康是美等」店家，實際免運條件請以賣場顯示為主。</p>  
+    <div class="links">  
+      <strong>全站大免運活動頁面</strong><br>  
+      <a href="https://s.shopee.tw/8Kj1usgrum" target="_blank">買家版</a>  
+      <a href="https://s.shopee.tw/BNKBunANm" target="_blank">賣家版</a>  
+    </div>  
+  </div>  
+</section>  
 
-    .tabs a.active{
-      background:var(--accent2);
-      border-color:var(--accent);
-    }
+<section id="core">  
+  <div class="card">  
+    <h3>核心重點</h3>  
+    <ul>  
+      <li>賣家強制加入「免運及進階賣家專案」，無法退出</li>  
+      <li>每筆訂單收取專案活動服務費  
+        <ul>  
+          <li>方案一：每筆訂單抽 6%</li>  
+          <li>方案二：每筆訂單固定 $60</li>  
+        </ul>  
+      </li>  
+      <li>每月可減免一筆專案活動服務費（第一筆訂單）</li>  
+      <li>指定物流與免運門檻  
+        <ul>  
+          <li>指定物流：蝦皮店到店、隔日到貨、店到家宅配、新竹物流</li>  
+          <li>免運門檻：店取滿 $199 / 宅配滿 $490</li>  
+          <li>週三/週六加碼蝦皮店到店 $149 免運</li>  
+        </ul>  
+      </li>  
+    </ul>  
+    <div class="note">  
+      免運費是蝦皮額外補貼，若「賣家未開指定物流 / 買家未選指定物流 / 訂單未達免運門檻」，該筆訂單就不會套用免運補貼，買家需自行付運費。<br><br>  
+      ⚠️ 即使買家自付運費，賣家仍須支付專案服務費（兩者相互獨立並無關聯性）。  
+    </div>  
+  </div>  
+</section>  
 
-    section{margin-bottom:36px;}
+<section id="plan">  
+  <div class="card">  
+    <h3>系統自動分配與方案選擇</h3>  
+    <p>未主動報名方案的賣家：系統會依過去訂單自動判斷最適合的方案（方案一或方案二）</p>  
+    <p>若想自行更改方案：需主動到後台重新報名，否則沿用系統判定方案</p>  
+    <p><strong>賣家後台報名頁面</strong><a href="https://seller.shopee.tw/portal/marketing/cmt/campaign?tab=2&sort=9" target="_blank">👉 前往</a>  
+      <br>（先確認目前方案、再至「可報名」欄位重新報名）<br>  
+        
+    </p>  
+    <p><strong>快速選擇方案原則（選擇方案二建議設低消）：</strong></p>  
+    <ul>  
+      <li>大部分訂單金額 &lt; 1,000 元 → 方案一（6%）</li>  
+      <li>大部分訂單金額 &gt; 1,000 元 → 方案二（每筆 $60）</li>  
+    </ul>  
+  </div>  
+</section>  
 
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:24px 22px 26px;
-      box-shadow:0 8px 20px rgba(0,0,0,.06);
-    }
+<section id="fee">  
+  <div class="card">  
+    <h3>蝦皮手續費細項</h3>  
+    </p><strong>1️⃣ 成交手續費：</strong> </p>分類基本費率約 4~7%，依商品類別不同（詳費率表）<br>未參加蝦幣回饋專案→促銷檔期另加收 2%（每月4天）  
 
-    section h3{
-      margin:0 0 14px;
-      font-size:20px;
-      font-family:'Caveat','Noto Sans TC',cursive;
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
+    </p><strong>2️⃣ 其他服務費：</strong></p>  
+    <ul>  
+      <li>「免運及進階賣家專案服務費」：方案一 6%、方案二 $60</li>  
+      <li>「蝦幣回饋專案服務費」（自由參加）：<br>✔️5%蝦幣回饋為訂單金額1.5%<br>✔️10%蝦幣回饋為訂單金額3%<br>（參加 10%蝦幣回饋，會減免0.5%活動服務費）</li>  
+      <li>若賣場被計分超過六分以上且進入懲處期，系統將自動於七個工作天內暫停參與方案（免收活動服務費）<br>  
+      <a href="https://seller.shopee.tw/edu/article/197" target="_blank">賣家計分系統說明</a></li>  
+    </ul>  
 
-    section h3::before{
-      content:"📝";
-    }
+    </p><strong>3️⃣ 金流與系統處理費：</strong></p> (平台交易金額+運費)×2.5%，刷卡分 6 期以上另計<br>含蝦皮折扣、蝦幣、補貼（不含賣家提供之折扣及優惠劵）</p>  
 
-    p{margin:0 0 14px;}
-    ul{padding-left:1.3em;margin:8px 0;}
-    li{margin:6px 0;}
+    <p><strong>其他可能費用（依各賣場性質）：</strong></p>  
+    <ul>  
+      <li>較長備貨 3%</li>  
+      <li>非整合物流隱碼費 $10</li>  
+      <li>代開發票 $2.5</li>  
+      <li>營業稅 5%</li>  
+    </ul>  
 
-    .note{
-      background:var(--accent-soft);
-      border-radius:12px;
-      padding:14px;
-      margin-top:14px;
-      font-size:14px;
-      color:var(--sub);
-    }
+    </p>2026年上半年蝦皮促銷檔期期間  
+  <ul>  
+      <li>一月：1/11-1/12；1/18；1/25</li>  
+      <li>二月：2/2-2/3；2/18；2/25</li>  
+      <li>三月：3/3-3/4；3/18；3/25</li>  
+      <li>四月：4/4；4/18-4/19；4/25</li>  
+      <li>五月：5/5-5/6；5/18；5/25</li>  
+      <li>六月：6/6；6/18-6/19；6/25</li>  
+    </ul><br>  
 
-    strong{
-      background:rgba(183,201,167,0.3);
-      padding:2px 4px;
-      border-radius:4px;
-    }
+    </h3>官方公告</h3><ul>  
+      <li><a href="https://seller.shopee.tw/edu/article/26430" target="_blank">2026年費率更新總整</a></li>  
+      <li><a href="https://seller.shopee.tw/edu/article/26470" target="_blank">成交手續費 & 金流與系統處理費（含基本費率表）</a></li>  
+      <li><a href="https://seller.shopee.tw/edu/article/18733" target="_blank">免運及進階賣家專案（含常見問題）</a></li>  
+      <li><a href="https://seller.shopee.tw/edu/article/14704" target="_blank">蝦幣回饋專案</a></li>  
+    </ul>  
+  </div>  
+</section>  
 
-    footer{
-      text-align:center;
-      margin-top:40px;
-      color:var(--sub);
-      font-size:14px;
-    }
+<section id="summary">  
+  <div class="card">  
+    <h3>總結與建議</h3>  
+    <ul>  
+      <li>蝦皮：最大贏家，抽成增加，免運又可吸引更多買家</li>  
+      <li>賣家：手續費提高、實收金額下降，需調整售價及策略</li>  
+      <li>買家：享有滿額免運，但商品價格可能稍高</li>  
+    </ul>  
+    <p><strong>建議策略</strong></p>  
+    <ul>  
+      <li><strong>多平台營運</strong>：降低對單一平台依賴</li>  
+      <li><strong>推薦平台</strong>：<a href="https://mall.iopenmall.tw/iopen/index.php?action=event_member" target="_blank">iOPENMall</a>（免手續費＋有免運券）</li>  
+      <li>其他平台：露天拍賣、奇摩拍賣、旋轉拍賣</li>  
+      <li><strong>iOPENMall 及露天拍賣都有支援無痛搬家</strong><br>  
+        <a href="https://www.threads.com/@ashley345a/post/DRZ3TQBgchj" target="_blank">查看教學</a>  
+      </li>  
+    </ul>  
+  </div>  
+</section>  
 
-    /* 優惠頁面 */
-    .deal-card{text-align:center;}
-
-    .deal-link{
-      display:block;
-      text-decoration:none;
-      color:inherit;
-    }
-
-    .deal-card img{
-      width:100%;
-      max-width:420px;
-      border-radius:14px;
-      box-shadow:0 6px 14px rgba(0,0,0,.08);
-      margin-bottom:12px;
-    }
-
-    .deal-title{
-      font-size:18px;
-      font-weight:700;
-      margin-bottom:6px;
-    }
-
-    .deal-note{
-      font-size:14px;
-      color:var(--sub);
-    }
-
-    @media(max-width:480px){
-      .card{padding:16px 12px 18px;}
-      .tabs a{padding:6px 10px;font-size:12px;}
-    }
-  </style>
-</head>
-
-<body>
-<div class="wrap">
-
-<header>
-  <h1>蝦皮 2026 年免運與手續費</h1>
-  <h2>［完整說明］</h2>
-</header>
-
-<nav class="tabs">
-  <a href="#intro">全站<br>大免運</a>
-  <a href="#core">核心<br>重點</a>
-  <a href="#plan">方案<br>選擇</a>
-  <a href="#fee">手續費<br>細項</a>
-  <a href="#summary">總結<br>建議</a>
-  <a href="#deal">優惠<br>頁面</a>
-</nav>
-
-<section id="intro">
-  <div class="card">
-    <h3>全站大免運說明</h3>
-    <p>
-      蝦皮 2026 年主推「全站大免運」，只要使用指定物流並達到免運門檻，
-      全站商品免用券即可享有免運，但賣家每筆訂單須支付專案服務費。
-    </p>
-    <p>
-      ⚠️ 備註：排除冷鏈、大材積、特殊物流與部分大型通路店家，實際條件以賣場顯示為主。
-    </p>
-  </div>
-</section>
-
-<section id="core">
-  <div class="card">
-    <h3>核心重點</h3>
-    <ul>
-      <li>強制加入免運及進階賣家專案</li>
-      <li>方案一：6%｜方案二：每筆 $60</li>
-      <li>每月首筆訂單可減免服務費</li>
-    </ul>
-  </div>
-</section>
-
-<section id="plan">
-  <div class="card">
-    <h3>方案選擇建議</h3>
-    <ul>
-      <li>客單價低於 $1000 → 方案一</li>
-      <li>客單價高於 $1000 → 方案二（建議設低消）</li>
-    </ul>
-  </div>
-</section>
-
-<section id="fee">
-  <div class="card">
-    <h3>手續費細項</h3>
-    <p><strong>成交手續費：</strong> 約 4~7%</p>
-    <p><strong>金流與系統處理費：</strong> 2.5%</p>
-  </div>
-</section>
-
-<section id="summary">
-  <div class="card">
-    <h3>總結建議</h3>
-    <ul>
-      <li>賣家需重新計算售價與利潤</li>
-      <li>建議多平台分散風險</li>
-    </ul>
-  </div>
-</section>
-
-<section id="deal">
-  <div class="card deal-card">
-    <a href="https://s.shopee.tw/5fiHvsvmZY" target="_blank" class="deal-link">
-      <img src="https://i.ibb.co/VcgYYj5y/sg-11134301-7rdx7-md31xjwijbdafc-1.jpg" alt="義美小泡芙">
-      <div class="deal-title">義美小泡芙 22 元／包</div>
-      <div class="deal-note">點擊圖片查看優惠</div>
-    </a>
-  </div>
-</section>
-
-<footer>
-  Threads｜@ashley345a
+<footer>  
+  Threads｜<a href="https://www.threads.com/@ashley345a" target="_blank">@ashley345a</a>  
 </footer>
 
-</div>
-
-<script>
-  const tabs = document.querySelectorAll('.tabs a');
-  const sections = document.querySelectorAll('section');
-
-  function showSection(target){
-    sections.forEach(sec=>sec.style.display='none');
-    target.style.display='block';
-  }
-
-  tabs.forEach(tab=>{
-    tab.addEventListener('click', e=>{
-      e.preventDefault();
-      tabs.forEach(t=>t.classList.remove('active'));
-      tab.classList.add('active');
-      showSection(document.querySelector(tab.getAttribute('href')));
-    });
-  });
-
-  showSection(sections[0]);
-  tabs[0].classList.add('active');
-</script>
-
-</body>
+  </div>    <script>  
+    const tabs = document.querySelectorAll('.tabs a');  
+    const sections = document.querySelectorAll('section');  
+  
+    function showSection(target){  
+      sections.forEach(sec=>sec.style.display='none');  
+      target.style.display='block';  
+    }  
+  
+    tabs.forEach(tab=>{  
+      tab.addEventListener('click', e=>{  
+        e.preventDefault();  
+        tabs.forEach(t=>t.classList.remove('active'));  
+        tab.classList.add('active');  
+        const target = document.querySelector(tab.getAttribute('href'));  
+        showSection(target);  
+      });  
+    });  
+  
+    // 初始顯示第一個頁籤  
+    const hash = window.location.hash;  
+    if(hash){  
+      const targetTab = document.querySelector(`.tabs a[href="${hash}"]`);  
+      if(targetTab) targetTab.classList.add('active');  
+      const targetSection = document.querySelector(hash);  
+      if(targetSection) showSection(targetSection);  
+    } else {  
+      showSection(sections[0]);  
+    }  
+  </script>  </body>  
 </html>
