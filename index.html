@@ -155,6 +155,7 @@ th,td{
   <a href="#plan">方案<br>選擇</a>  
   <a href="#fee">手續費<br>細項</a>  
   <a href="#summary">總結<br>建議</a>  
+      <a href="#deal">優惠<br>頁面</a>
 </nav>  
 
 <section id="intro">  
@@ -276,7 +277,18 @@ th,td{
     </ul>  
   </div>  
 </section>  
-
+<section id="deal">
+  <div class="card deal-card">
+    <a href="https://s.shopee.tw/5fiHvsvmZY" target="_blank" class="deal-link">
+      <img
+        src="https://i.ibb.co/VcgYYj5y/sg-11134301-7rdx7-md31xjwijbdafc-1.jpg"
+        alt="義美小泡芙"
+      />
+      <div class="deal-title">義美小泡芙 22 元／包</div>
+      <div class="deal-note">點擊圖片查看優惠</div>
+    </a>
+  </div>
+</section>
 <footer>  
   Threads｜<a href="https://www.threads.com/@ashley345a" target="_blank">@ashley345a</a>  
 </footer>
@@ -289,7 +301,35 @@ th,td{
       sections.forEach(sec=>sec.style.display='none');  
       target.style.display='block';  
     }  
-  
+  /* 優惠頁面 */
+.deal-card {
+  text-align: center;
+}
+
+.deal-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.deal-card img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+  margin-bottom: 12px;
+}
+
+.deal-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.deal-note {
+  font-size: 14px;
+  color: var(--sub);
+}
     tabs.forEach(tab=>{  
       tab.addEventListener('click', e=>{  
         e.preventDefault();  
